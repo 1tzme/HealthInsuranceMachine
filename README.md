@@ -62,6 +62,24 @@ The model is trained using various machine learning algorithms and evaluated bas
 
 - **POST /predict**: Accepts user input and returns the prediction result.
 
+## Deployment
+
+This application is deployed on Render. You can access the live version at:
+[https://health-insurance-classifier.onrender.com](https://health-insurance-classifier.onrender.com)
+
+To deploy your own instance:
+
+1. Fork this repository to your GitHub account
+2. Go to [render.com](https://render.com) and create an account if you don't have one
+3. Click "New +" and select "Web Service"
+4. Connect your GitHub account and select this repository
+5. Use the following settings:
+   - Name: health-insurance-classifier (or your preferred name)
+   - Runtime: Python
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `uvicorn src.api.app:app --host 0.0.0.0 --port $PORT`
+6. Click "Create Web Service"
+
 ## License
 
 The project was made by `1tzme`

@@ -55,12 +55,20 @@ except Exception as e:
     raise
 
 # Initialize FastAPI app
-app = FastAPI(title="Health Insurance Claim Predictor")
+app = FastAPI(
+    title="Health Insurance Claim Predictor",
+    description="Predict health insurance claims using machine learning",
+    version="1.0.0"
+)
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "https://health-insurance-classifier.onrender.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]

@@ -6,3 +6,5 @@ uvicorn
 numpy
 matplotlib
 seaborn
+jinja2
+python-multipart
