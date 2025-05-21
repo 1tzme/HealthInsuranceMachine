@@ -33,7 +33,7 @@ This project is a machine learning application designed to predict whether an in
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/1tzme/HealthInsuranceMachine.git
    cd health-insurance-classifier
    ```
 
@@ -44,7 +44,7 @@ This project is a machine learning application designed to predict whether an in
 
 3. Run the web service:
    ```
-   python src/api/app.py
+   uvicorn src.api.app:app --reload --host 0.0.0.0 --port 8000
    ```
 
 4. Open your web browser and navigate to `http://localhost:8000` to access the application.
@@ -64,4 +64,4 @@ The model is trained using various machine learning algorithms and evaluated bas
 
 ## License
 
-This project is licensed under the MIT License.
+The project was made by `1tzme`
